@@ -2,247 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Justyn Napolitano | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
-  <header>
+  <header class="text-center py-4" style="background: #222; color: white;">
     <h1>Justyn Napolitano</h1>
     <p>Web Developer | Problem Solver | Lifelong Learner</p>
-    <a href="Justyn Napolitano Resume.docx" download class="button">Download Resume</a>
-    <button id="theme-toggle" class="button" style="margin-left: 1rem;"><i id="theme-icon" class="fas fa-moon"></i></button>
+    <a href="assets/Justyn Napolitano Resume.pdf" download class="button">Download Resume</a>
+    <button id="theme-toggle" class="button" style="margin-left: 1rem;">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
   </header>
+  
+  <main class="container my-5">
+    <section id="projects">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div id="project-list" class="container">
+        <div class="row" id="project-row"></div>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div id="project-list"></div>
-  </section>
+    <section id="skills" class="container my-5">
+      <h2 class="text-center mb-4">Skills</h2>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <h3>Technical Skills</h3>
-      <li><i class="fab fa-html5"></i> HTML5</li>
-      <li><i class="fab fa-css3-alt"></i> CSS3</li>
-      <li><i class="fab fa-js"></i> JavaScript</li>
-      <li><i class="fab fa-react"></i> React</li>
-      <li><i class="fab fa-node-js"></i> Node.js</li>
-      <li><i class="fab fa-python"></i> Python</li>
-      <li><i class="fab fa-git"></i> Git</li>
-      <li><i class="fab fa-docker"></i> Docker</li>
-      <li><i class="fas fa-database"></i> SQL</li>
-      <li><i class="fas fa-mobile-alt"></i> Mobile Development</li>
-      </ul>
-      <ul class="skills">
-        <h3>Personal Skills</h3>
-        <li><i class="fas fa-users"></i> Team Collaboration</li>
-        <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
-        <li><i class="fas fa-network-wired"></i> Networking Basics</li>
-        <li><i class="fas fa-shield-alt"></i> Information Security</li>
-      </ul>
-    
-  </section>
+      <div class="text-center mb-3">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#techSkills" aria-expanded="true" aria-controls="techSkills">
+          Toggle Technical Skills
+        </button>
+      </div>
+      <div class="collapse show" id="techSkills">
+        <div class="row g-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card text-center p-3 h-100 bg-white text-black dark-mode-bg-dark dark-mode-text-white">
+              <i class="fab fa-html5 fa-2x mb-2 text-danger"></i>
+              <p class="card-text fw-bold">HTML</p>
+              <p class="small">Built the structure and layout of my portfolio site with semantic, accessible HTML.</p>
+            </div>
+          </div>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card text-center p-3 h-100 bg-white text-black dark-mode-bg-dark dark-mode-text-white">
+              <i class="fab fa-css3-alt fa-2x mb-2 text-primary"></i>
+              <p class="card-text fw-bold">CSS</p>
+              <p class="small">Styled my portfolio site with responsive design and custom dark mode using CSS.</p>
+            </div>
+          </div>
 
-  <footer>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card text-center p-3 h-100 bg-white text-black dark-mode-bg-dark dark-mode-text-white">
+              <i class="fab fa-js fa-2x mb-2 text-warning"></i>
+              <p class="card-text fw-bold">JavaScript</p>
+              <p class="small">Implemented core game logic and interactive UI features for a match-3 RPG game.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card text-center p-3 h-100 bg-white text-black dark-mode-bg-dark dark-mode-text-white">
+              <i class="fab fa-react fa-2x mb-2 text-danger"></i>
+              <p class="card-text fw-bold">React</p>
+              <p class="small">Experience building UI components and managing state with React.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: #222; color: white; text-align: center; padding: 1rem 0;">
     <p>&copy; 2025 Justyn Napolitano</p>
     <div class="socials">
-      <a href="https://github.com/JNapZz" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/justyn-napolitano" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="contact.html" class="button" style="margin-right: 1rem;">Contact Me</a>
+      <a href="https://github.com/JNapzz" target="_blank" style="color: white; margin-right: 1rem;">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="https://linkedin.com/in/napolitano-justyn" target="_blank" style="color: white;">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
     </div>
   </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Your JS -->
+  <script defer src="src/script.js"></script>
 </body>
 </html>
 
-<!-- style.css -->
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-    transition: background 0.5s, color 0.5s;
-  }
-
-  body.dark-mode {
-    background: #1e1e1e;
-    color: #f4f4f4;
-  }
-
-  header, footer {
-    background: #222;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-    transition: background 0.5s;
-  }
-
-  body.dark-mode header,
-  body.dark-mode footer {
-    background: #111;
-  }
-
-  header h1 {
-    margin: 0;
-  }
-
-  .button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  section {
-    padding: 2rem;
-  }
-
-  #project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .project {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: background 0.3s;
-  }
-
-  body.dark-mode .project,
-  body.dark-mode .skills li {
-    background: #2c2c2c;
-    box-shadow: 0 0 10px rgba(255,255,255,0.05);
-  }
-
-  .skills {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-  }
-
-  .skills li {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    transition: background 0.3s;
-  }
-
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: auto;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #000;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  body.dark-mode #contact-form input,
-  body.dark-mode #contact-form textarea {
-    background: #333;
-    color: #fff;
-    border: 1px solid #666;
-  }
-
-  #contact-form button {
-    background: #28a745;
-    color: #fff;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .socials a {
-    color: #fff;
-    margin: 0 0.5rem;
-    font-size: 1.5rem;
-  }
-</style>
-
-<!-- script.js -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const projects = [
-      {
-        title: "Astral Chaser",
-        description: "A match 3 gem board game where heroes get charged by the matching gem colors to defeat enemies. ",
-        link: "https://jnapzz.github.io/AstralChaser/"
-      },
-      {
-        title: "Project Two",
-        description: "Another amazing project with great features.",
-        link: "#"
-      }
-    ];
-
-    const projectList = document.getElementById('project-list');
-
-    projects.forEach(project => {
-      const div = document.createElement('div');
-      div.classList.add('project');
-      div.innerHTML = `
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <a href="${project.link}" target="_blank">View Project</a>
-      `;
-      projectList.appendChild(div);
-    });
-
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Message sent!');
-    });
-
-    // Dark mode toggle with icon and preference memory
-    const toggleButton = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-
-    const applyTheme = (isDark) => {
-      document.body.classList.toggle('dark-mode', isDark);
-      themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    };
-
-    const savedTheme = localStorage.getItem('darkMode') === 'true';
-    applyTheme(savedTheme);
-
-    toggleButton.addEventListener('click', () => {
-      const isDark = document.body.classList.toggle('dark-mode');
-      themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-      localStorage.setItem('darkMode', isDark);
-    });
-  });
-</script>
